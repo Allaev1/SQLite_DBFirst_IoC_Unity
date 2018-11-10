@@ -25,6 +25,13 @@ namespace SQLite_DataBaseFirst_Sample
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = ViewModel;
+        }
+
+        MainPageViewModel _viewModel;
+        public MainPageViewModel ViewModel
+        {
+            get { return _viewModel ?? (_viewModel = new MainPageViewModel()); }
         }
     }
 }

@@ -9,10 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="AvailableList" ItemsSource="{x:Bind ViewModel.AvailableProducts,Mode=TwoWay}" 
-                  Grid.Row="2">
+        <ListView  ItemsSource="{x:Bind ViewModel.Products}">
             <ListView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="local:Product">
                     <StackPanel>
                         <TextBlock>
                         <Run Text="ID - "/>

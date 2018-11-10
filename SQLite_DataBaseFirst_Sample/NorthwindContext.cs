@@ -3,10 +3,13 @@
 // See the blog post here for help on using the generated code: http://erikej.blogspot.dk/2014/10/database-first-with-sqlite-in-universal.html
 using SQLite;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace SQLite_DataBaseFirst_Sample
 {
-    public class NorthwindContext
+    public class NorthwindContext : DbContext
     {
         string _path;
         public NorthwindContext(string path)
@@ -34,6 +37,7 @@ namespace SQLite_DataBaseFirst_Sample
             }
         }
     }
+
     public partial class Category
     {
         [PrimaryKey, AutoIncrement]
