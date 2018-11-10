@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -37,8 +38,14 @@ namespace SQLite_DataBaseFirst_Sample
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            if (await ApplicationData.Current.LocalFolder.TryGetItemAsync("NORTHWIND.sqlite") == null)
+            {
+                StorageFile databaseFile = await Package.Current.InstalledLocation.GetFileAsync("NORTHWIND.sqlite");
+                await databaseFile.CopyAsync(ApplicationData.Current.LocalFolder);
+            }
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

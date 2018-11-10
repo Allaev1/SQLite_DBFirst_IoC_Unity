@@ -13,8 +13,8 @@ namespace SQLite_DataBaseFirst_Sample
         {
             _path = path;
         }
-        
-         public void Create()
+
+        public void Create()
         {
             using (SQLiteConnection db = new SQLiteConnection(_path))
             {
@@ -38,322 +38,322 @@ namespace SQLite_DataBaseFirst_Sample
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CategoryName { get; set; }
-        
+
         [MaxLength(8000)]
         public String Description { get; set; }
-        
+
     }
-    
+
     public partial class Customer
     {
         [PrimaryKey]
         [MaxLength(8000)]
         public String Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CompanyName { get; set; }
-        
+
         [MaxLength(8000)]
         public String ContactName { get; set; }
-        
+
         [MaxLength(8000)]
         public String ContactTitle { get; set; }
-        
+
         [MaxLength(8000)]
         public String Address { get; set; }
-        
+
         [MaxLength(8000)]
         public String City { get; set; }
-        
+
         [MaxLength(8000)]
         public String Region { get; set; }
-        
+
         [MaxLength(8000)]
         public String PostalCode { get; set; }
-        
+
         [MaxLength(8000)]
         public String Country { get; set; }
-        
+
         [MaxLength(8000)]
         public String Phone { get; set; }
-        
+
         [MaxLength(8000)]
         public String Fax { get; set; }
-        
+
     }
-    
+
     public partial class CustomerCustomerDemo
     {
         [PrimaryKey]
         [MaxLength(8000)]
         public String Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CustomerTypeId { get; set; }
-        
+
     }
-    
+
     public partial class CustomerDemographic
     {
         [PrimaryKey]
         [MaxLength(8000)]
         public String Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CustomerDesc { get; set; }
-        
+
     }
-    
+
     public partial class Employee
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String LastName { get; set; }
-        
+
         [MaxLength(8000)]
         public String FirstName { get; set; }
-        
+
         [MaxLength(8000)]
         public String Title { get; set; }
-        
+
         [MaxLength(8000)]
         public String TitleOfCourtesy { get; set; }
-        
+
         [MaxLength(8000)]
         public String BirthDate { get; set; }
-        
+
         [MaxLength(8000)]
         public String HireDate { get; set; }
-        
+
         [MaxLength(8000)]
         public String Address { get; set; }
-        
+
         [MaxLength(8000)]
         public String City { get; set; }
-        
+
         [MaxLength(8000)]
         public String Region { get; set; }
-        
+
         [MaxLength(8000)]
         public String PostalCode { get; set; }
-        
+
         [MaxLength(8000)]
         public String Country { get; set; }
-        
+
         [MaxLength(8000)]
         public String HomePhone { get; set; }
-        
+
         [MaxLength(8000)]
         public String Extension { get; set; }
-        
+
         public Byte[] Photo { get; set; }
-        
+
         [MaxLength(8000)]
         public String Notes { get; set; }
-        
+
         public Int64? ReportsTo { get; set; }
-        
+
         [MaxLength(8000)]
         public String PhotoPath { get; set; }
-        
+
     }
-    
+
     public partial class EmployeeTerritory
     {
         [PrimaryKey]
         [MaxLength(8000)]
         public String Id { get; set; }
-        
+
         [NotNull]
         public Int64 EmployeeId { get; set; }
-        
+
         [MaxLength(8000)]
         public String TerritoryId { get; set; }
-        
+
     }
-    
+
     public partial class Order
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CustomerId { get; set; }
-        
+
         [NotNull]
         public Int64 EmployeeId { get; set; }
-        
+
         [MaxLength(8000)]
         public String OrderDate { get; set; }
-        
+
         [MaxLength(8000)]
         public String RequiredDate { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShippedDate { get; set; }
-        
+
         public Int64? ShipVia { get; set; }
-        
+
         [NotNull]
         public Decimal Freight { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShipName { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShipAddress { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShipCity { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShipRegion { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShipPostalCode { get; set; }
-        
+
         [MaxLength(8000)]
         public String ShipCountry { get; set; }
-        
+
     }
-    
+
     public partial class OrderDetail
     {
         [PrimaryKey]
         [MaxLength(8000)]
         public String Id { get; set; }
-        
+
         [NotNull]
         public Int64 OrderId { get; set; }
-        
+
         [NotNull]
         public Int64 ProductId { get; set; }
-        
+
         [NotNull]
         public Decimal UnitPrice { get; set; }
-        
+
         [NotNull]
         public Int64 Quantity { get; set; }
-        
+
         [NotNull]
         public Double Discount { get; set; }
-        
+
     }
-    
+
     public partial class Product
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String ProductName { get; set; }
-        
+
         [NotNull]
         public Int64 SupplierId { get; set; }
-        
+
         [NotNull]
         public Int64 CategoryId { get; set; }
-        
+
         [MaxLength(8000)]
         public String QuantityPerUnit { get; set; }
-        
+
         [NotNull]
         public Decimal UnitPrice { get; set; }
-        
+
         [NotNull]
         public Int64 UnitsInStock { get; set; }
-        
+
         [NotNull]
         public Int64 UnitsOnOrder { get; set; }
-        
+
         [NotNull]
         public Int64 ReorderLevel { get; set; }
-        
+
         [NotNull]
         public Int64 Discontinued { get; set; }
-        
+
     }
-    
+
     public partial class Region
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String RegionDescription { get; set; }
-        
+
     }
-    
+
     public partial class Shipper
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CompanyName { get; set; }
-        
+
         [MaxLength(8000)]
         public String Phone { get; set; }
-        
+
     }
-    
+
     public partial class Supplier
     {
         [PrimaryKey, AutoIncrement]
         public Int64 Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String CompanyName { get; set; }
-        
+
         [MaxLength(8000)]
         public String ContactName { get; set; }
-        
+
         [MaxLength(8000)]
         public String ContactTitle { get; set; }
-        
+
         [MaxLength(8000)]
         public String Address { get; set; }
-        
+
         [MaxLength(8000)]
         public String City { get; set; }
-        
+
         [MaxLength(8000)]
         public String Region { get; set; }
-        
+
         [MaxLength(8000)]
         public String PostalCode { get; set; }
-        
+
         [MaxLength(8000)]
         public String Country { get; set; }
-        
+
         [MaxLength(8000)]
         public String Phone { get; set; }
-        
+
         [MaxLength(8000)]
         public String Fax { get; set; }
-        
+
         [MaxLength(8000)]
         public String HomePage { get; set; }
-        
+
     }
-    
+
     public partial class Territory
     {
         [PrimaryKey]
         [MaxLength(8000)]
         public String Id { get; set; }
-        
+
         [MaxLength(8000)]
         public String TerritoryDescription { get; set; }
-        
+
         [NotNull]
         public Int64 RegionId { get; set; }
-        
+
     }
-    
+
 }
