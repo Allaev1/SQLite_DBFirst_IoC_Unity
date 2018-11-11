@@ -5,11 +5,10 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Microsoft.EntityFrameworkCore;
 
 namespace SQLite_DataBaseFirst_Sample
 {
-    public class NorthwindContext : DbContext
+    public class NorthwindContext
     {
         string _path;
         public NorthwindContext(string path)
