@@ -5,13 +5,13 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
+    
 namespace SQLite_DataBaseFirst_Sample
 {
-    public class NorthwindContext
+    public class NorthwindAccess
     {
         string _path;
-        public NorthwindContext(string path)
+        public NorthwindAccess(string path)
         {
             _path = path;
         }

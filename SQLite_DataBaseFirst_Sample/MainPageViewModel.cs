@@ -11,7 +11,7 @@ namespace SQLite_DataBaseFirst_Sample
 {
     public class MainPageViewModel
     {
-        NorthwindContext context = new NorthwindContext("Northwind.sqlite");
+        NorthwindAccess context = new NorthwindAccess("Northwind.sqlite");
         ObservableCollection<Product> products;
 
         public MainPageViewModel()
