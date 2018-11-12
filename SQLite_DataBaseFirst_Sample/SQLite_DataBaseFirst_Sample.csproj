@@ -107,6 +107,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="Assets\extAndupd.png" />
+    <Content Include="Assets\ExtensionAndTools.PNG" />
     <Content Include="Assets\NuGetScreen.PNG" />
     <Content Include="Northwind.sqlite">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
