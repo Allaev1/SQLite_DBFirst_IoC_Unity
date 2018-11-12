@@ -19,6 +19,13 @@ SQLite-net you can download from Manager of NuGet packages by entering
 ![](https://github.com/Allaev1/SQLite_DataBaseFirst_Sample/blob/master/SQLite_DataBaseFirst_Sample/Assets/NuGetScreen.PNG)
 >NOTE: In the [Toolbox`s samples](https://github.com/ErikEJ/SqlCeToolbox/wiki#how-do-i-use-the-sql-server-compact--sqlite-toolbox) will be used previous version SQLite-net library 
 
+## Let`s generate 
+Look into your Tools onto Menu row and click on `SQLite/SQL Server Compact Toolbox`
+
+
+
+
+
 
 
 

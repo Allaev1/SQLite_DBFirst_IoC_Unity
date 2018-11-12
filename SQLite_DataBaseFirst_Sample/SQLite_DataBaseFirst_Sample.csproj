@@ -108,6 +108,7 @@
     </AppxManifest>
     <Content Include="Assets\extAndupd.png" />
     <Content Include="Assets\ExtensionAndTools.PNG" />
+    <Content Include="Assets\GifShowToolbox.gif" />
     <Content Include="Assets\NuGetScreen.PNG" />
     <Content Include="Northwind.sqlite">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
