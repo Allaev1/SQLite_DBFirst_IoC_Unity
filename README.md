@@ -1,5 +1,5 @@
 # SQLite_DataBaseFirst_Sample
-This project can be useful for you if you are watching for allowance of how generate
+This project can be useful for you if you are searching for allowance of how generate
 models of SQLite database. 
 
 ## Tools and libraries used in this sample:
