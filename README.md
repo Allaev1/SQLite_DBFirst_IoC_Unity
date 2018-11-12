@@ -25,6 +25,37 @@ SQLite-net you can download from Manager of NuGet packages by entering
 Look into your Tools onto Menu row and click on `SQLite/SQL Server Compact Toolbox`
 ![](https://github.com/Allaev1/SQLite_DataBaseFirst_Sample/blob/master/SQLite_DataBaseFirst_Sample/Assets/GifShowToolbox.gif)
 
+You will have class named DataAccess (as I think it`s best name cause this class even do not implement DbContext class
+and generally being only as holder of models. But it is only my opinion it is why I put in brackets and you can name this class as you want ;) )
+
+And in this part SQLte-net library provides us Attributes to make ORM model
+```csharp
+    public partial class Region
+    {
+        [PrimaryKey, AutoIncrement]
+        public Int64 Id { get; set; }
+
+        [MaxLength(8000)]
+        public String RegionDescription { get; set; }
+
+    }
+
+    public partial class Shipper
+    {
+        [PrimaryKey, AutoIncrement]
+        public Int64 Id { get; set; }
+
+        [MaxLength(8000)]
+        public String CompanyName { get; set; }
+
+        [MaxLength(8000)]
+        public String Phone { get; set; }
+
+    }
+
+```
+>NOTE: SQLite-net do not full blown ORM. For instance, it do not allow 
+forgein key and multiple key but this issue debating [here](https://github.com/praeclarum/sqlite-net/issues/280)
 
 
 
