@@ -12,6 +12,7 @@ models of SQLite database.
 ## Prepare environment 
 You can get Toolbox from ![](https://github.com/Allaev1/SQLite_DataBaseFirst_Sample/blob/master/SQLite_DataBaseFirst_Sample/Assets/extAndupd.png)
 by entering SQLite Toolbox and get this
+
 ![](https://github.com/Allaev1/SQLite_DataBaseFirst_Sample/blob/master/SQLite_DataBaseFirst_Sample/Assets/ExtensionAndTools.PNG)
 
 SQLite-net you can download from Manager of NuGet packages by entering
@@ -21,6 +22,7 @@ SQLite-net you can download from Manager of NuGet packages by entering
 
 ## Let`s generate 
 Look into your Tools onto Menu row and click on `SQLite/SQL Server Compact Toolbox`
+![](https://github.com/Allaev1/SQLite_DataBaseFirst_Sample/blob/master/SQLite_DataBaseFirst_Sample/Assets/GifShowToolbox.gif)
 
 
 
