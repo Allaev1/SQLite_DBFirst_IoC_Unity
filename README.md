@@ -10,4 +10,6 @@ models of SQLite database.
 
 
 ## Prepare environment 
-You can get Toolbox from 
+You can get Toolbox from ![](https://github.com/Allaev1/SQLite_DataBaseFirst_Sample/blob/master/SQLite_DataBaseFirst_Sample/Assets/extAndupd.png)
+
+SQLite-net you can download from your 
