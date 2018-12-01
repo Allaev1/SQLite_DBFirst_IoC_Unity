@@ -31,7 +31,7 @@ namespace SQLite_DataBaseFirst_Sample
         MainPageViewModel _viewModel;
         public MainPageViewModel ViewModel
         {
-            get { return _viewModel ?? (_viewModel = new MainPageViewModel()); }
+            get { return _viewModel ?? (_viewModel = (MainPageViewModel)DataContext); }
         }
     }
 }

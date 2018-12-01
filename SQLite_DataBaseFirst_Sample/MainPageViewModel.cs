@@ -5,21 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using SQLite;
-using SQLitePCL;
+using Template10.Mvvm;
 
 namespace SQLite_DataBaseFirst_Sample
 {
-    public class MainPageViewModel
+    public class MainPageViewModel : ViewModelBase
     {
-        NorthwindAccess context = new NorthwindAccess("Northwind.sqlite");
         ObservableCollection<Product> products;
 
-        public MainPageViewModel()
+        public MainPageViewModel(SQLiteConnection northwind)
         {
-            using (SQLiteConnection db = new SQLiteConnection("Northwind.sqlite"))
-            {
-                products = new ObservableCollection<Product>(db.Table<Product>().ToList<Product>());
-            }
+            products = new ObservableCollection<Product>(northwind.Table<Product>());
         }
 
         public ObservableCollection<Product> Products

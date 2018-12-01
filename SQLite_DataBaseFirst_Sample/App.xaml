@@ -1,7 +1,8 @@
-﻿<Application
+﻿<Template10:BootStrapper
     x:Class="SQLite_DataBaseFirst_Sample.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SQLite_DataBaseFirst_Sample">
+    xmlns:local="using:SQLite_DataBaseFirst_Sample"
+    xmlns:Template10="using:Template10.Common">
 
-</Application>
+</Template10:BootStrapper>
