@@ -5,7 +5,7 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-    
+   
 namespace SQLite_DataBaseFirst_Sample
 {
     public class NorthwindAccess
