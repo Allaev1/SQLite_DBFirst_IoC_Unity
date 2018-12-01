@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLite_DataBaseFirst_Sample", "SQLite_DataBaseFirst_Sample\SQLite_DataBaseFirst_Sample.csproj", "{925A53CD-3090-4369-85E0-B71600A74C48}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A02E1C5-3232-4153-893C-DC707F836116}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLite_DBFirst_IoC_Unity", "SQLite_DataBaseFirst_Sample\SQLite_DBFirst_IoC_Unity.csproj", "{925A53CD-3090-4369-85E0-B71600A74C48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

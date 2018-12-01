@@ -7,8 +7,8 @@
     <ProjectGuid>{925A53CD-3090-4369-85E0-B71600A74C48}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQLite_DataBaseFirst_Sample</RootNamespace>
-    <AssemblyName>SQLite_DataBaseFirst_Sample</AssemblyName>
+    <RootNamespace>SQLite_DBFirst_IoC_Unity</RootNamespace>
+    <AssemblyName>SQLite_DBFirst_IoC_Unity</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
