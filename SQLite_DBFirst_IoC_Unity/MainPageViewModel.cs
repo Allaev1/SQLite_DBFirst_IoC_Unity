@@ -7,18 +7,18 @@ using System.Collections.ObjectModel;
 using SQLite;
 using Template10.Mvvm;
 
-namespace SQLite_DataBaseFirst_Sample
+namespace SQLite_DBFirst_IoC_Unity
 {
     public class MainPageViewModel : ViewModelBase
     {
-        ObservableCollection<Product> products;
+        ObservableCollection<Products> products;
 
         public MainPageViewModel(SQLiteConnection northwind)
         {
-            products = new ObservableCollection<Product>(northwind.Table<Product>());
+            products = new ObservableCollection<Products>(northwind.Table<Products>());
         }
 
-        public ObservableCollection<Product> Products
+        public ObservableCollection<Products> Products
         {
             get { return products; }
         }

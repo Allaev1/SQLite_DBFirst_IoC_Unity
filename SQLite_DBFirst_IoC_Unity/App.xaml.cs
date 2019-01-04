@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 using Template10.Services.NavigationService;
 using SQLite;
 
-namespace SQLite_DataBaseFirst_Sample
+namespace SQLite_DBFirst_IoC_Unity
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -37,14 +37,20 @@ namespace SQLite_DataBaseFirst_Sample
             this.InitializeComponent();
         }
 
-        public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
+        public async override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
+            if (await ApplicationData.Current.LocalFolder.TryGetItemAsync("Northwind.db") == null)
+            {
+                StorageFile databaseFile = await Package.Current.InstalledLocation.GetFileAsync("Northwind.db");
+                await databaseFile.CopyAsync(ApplicationData.Current.LocalFolder);
+            }
+
             SimpleIoc.Default.Register<MainPageViewModel>();
-            SimpleIoc.Default.Register(() => { return new SQLiteConnection("Northwind.sqlite"); });
+            SimpleIoc.Default.Register(() => { return new SQLiteConnection("Northwind.db"); });
 
             NavigationService.Navigate(typeof(MainPage));
 
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
 
         public override INavigable ResolveForPage(Page page, NavigationService navigationService)

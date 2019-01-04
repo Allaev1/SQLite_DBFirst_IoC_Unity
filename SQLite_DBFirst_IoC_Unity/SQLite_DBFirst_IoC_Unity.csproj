@@ -95,8 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="MainPageViewModel.cs" />
-    <Compile Include="NorthwindAccess.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -110,9 +110,7 @@
     <Content Include="Assets\ExtensionAndTools.PNG" />
     <Content Include="Assets\GifShowToolbox.gif" />
     <Content Include="Assets\NuGetScreen.PNG" />
-    <Content Include="Northwind.sqlite">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Northwind.db" />
     <None Include="SQLite_DataBaseFirst_Sample_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
