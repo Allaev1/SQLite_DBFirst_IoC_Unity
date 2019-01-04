@@ -40,7 +40,7 @@ namespace SQLite_DataBaseFirst_Sample
         public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
             SimpleIoc.Default.Register<MainPageViewModel>();
-            SimpleIoc.Default.Register<SQLiteConnection>(() => { return new SQLiteConnection("Northwind.sqlite"); });
+            SimpleIoc.Default.Register(() => { return new SQLiteConnection("Northwind.sqlite"); });
 
             NavigationService.Navigate(typeof(MainPage));
 
